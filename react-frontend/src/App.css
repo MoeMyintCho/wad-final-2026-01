@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #202938;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #2457d6;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd3df;
+  border-radius: 6px;
+  background: white;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.page {
+  width: min(100% - 32px, 1000px);
+  margin: 32px auto;
+}
+
+.panel {
+  margin: 20px 0;
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 16px #15223812;
+}
+
+.auth-panel {
+  max-width: 460px;
+  margin: 60px auto;
+}
+
+.topbar,
+.list-heading,
+.actions,
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.switcher {
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+form > button {
+  width: 100%;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.course {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e3e7ee;
+}
+
+.course:last-child {
+  border-bottom: 0;
+}
+
+.course h3 {
+  margin-top: 0;
+}
+
+.course p {
+  overflow-wrap: anywhere;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 6px;
+  background: #eef3ff;
+}
+
+@media (max-width: 600px) {
+  .topbar,
+  .course {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+}
